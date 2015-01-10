@@ -14,7 +14,7 @@
       <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
       <!-- *_path はUserモデルを作成したときに、
       deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_user.email %></strong>.
+      Logged in as <strong><%= current_user.username %></strong>.
       <%= link_to "logout", destroy_user_session_path, method: :delete %>
       <% else %>
       <%= link_to "signup", new_user_registration_path %> |
