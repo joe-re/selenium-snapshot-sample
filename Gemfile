@@ -39,3 +39,4 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'paperclip'
