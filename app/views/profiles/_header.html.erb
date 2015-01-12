@@ -1,2 +1,2 @@
-<h3><p>Name: <%= current_user.username %></p></h3>
-<h3><p>Email: <%= current_user.email %></p></h3>
+<h3><p>Name: <%= content_tag(:span, current_user.username, id: 'username')%></p></h3>
+<h3><p>Email: <%= content_tag(:span, current_user.email, id: 'email') %></p></h3>
