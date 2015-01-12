@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :firefox
-FileUtils.mkdir_p 'snapshots'
+FileUtils.mkdir_p 'screenshots'
 
 [
   { email: 'yui_hirasawa@test.co.jp', password: 'yuihirasawa' },
@@ -20,9 +20,9 @@ FileUtils.mkdir_p 'snapshots'
   driver.navigate.to 'http://localhost:3000/profile'
   sleep(1) # デモのため少し待機
 
-  # snapshotを撮る
+  # screenshotを撮る
   username = driver.find_element(:id, 'username').text
-  driver.save_screenshot("snapshots/#{username}.png")
+  driver.save_screenshot("screenshots/#{username}.png")
 
   # ログアウト
   driver.find_element(:id, 'logout').click
