@@ -1,13 +1,8 @@
-<h1>This is your profile</h1>
+<%= render 'profiles/header' %>
 
 <% if @profile %>
 <p><%= image_tag @profile.avatar.url(:medium) %></p>
 <% end %>
-
-<h3><p>Name: <%= current_user.username %></p></h3>
-<h3><p>Email: <%= current_user.email %></p></h3>
-
-<br>
 
 <% if @profile %>
 <h3>Introduction: </h3>
