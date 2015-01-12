@@ -5,6 +5,9 @@ FileUtils.mkdir_p 'snapshots'
 
 [
   { email: 'yui_hirasawa@test.co.jp', password: 'yuihirasawa' },
+  { email: 'mio_akiyama@test.co.jp', password: 'mioakiyama' },
+  { email: 'ritsu_tainaka@test.co.jp', password: 'ritsutainaka' },
+  { email: 'tsumugi_kotobuki@test.co.jp', password: 'tsumugikotobuki' },
 ].each do |user|
   # ログイン
   driver.navigate.to 'http://localhost:3000'
@@ -21,6 +24,9 @@ FileUtils.mkdir_p 'snapshots'
   username = driver.find_element(:id, 'username').text
   driver.save_screenshot("snapshots/#{username}.png")
 
-  # 終了
-  driver.quit
+  # ログアウト
+  driver.find_element(:id, 'logout').click
 end
+
+# 終了
+driver.quit
